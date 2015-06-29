@@ -1,0 +1,46 @@
+{
+  "name": "Projeto",
+  "version": "1.0.0",
+  "description": "Projeto PI",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/luizfernandoalvesbraga/projetp.git"
+  },
+  "author": "Luiz Fernando Alves Braga",
+  "bugs": {
+    "url": "https://github.com/luizfernandoalvesbraga/projetp/issues"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test": "./node_modules/mocha/bin/mocha"
+  },
+  "engines": {
+    "node": "0.12.2"
+  },
+  "homepage": "https://github.com/luizfernandoalvesbraga/projetp",
+  "dependencies": {
+      "body-parser": "^1.5.2",
+      "errorhandler": "^1.1.1",
+      "express": "^4.8.0",
+      "express-session": "^1.7.2",
+      "jade": "^1.5.0",
+      "method-override": "^2.1.2",
+      "morgan": "^1.2.2",
+      "multer": "^0.1.3",
+      "serve-favicon": "^2.0.1",
+      "express-load": "*",
+      "mongoose": "*",
+      "express-flash": "*",
+      "cookie-parser": "*",
+      "moment": "*",
+      "mocha": "^2.2.5",
+      "should": "^6.0.3",
+      "accounting": "^0.4.1",
+      "ejs": "^2.3.1"
+  },
+  "devDependencies": {
+    "mocha": "^2.2.5",
+    "should": "^6.0.3"
+  }
+}

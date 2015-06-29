@@ -1,0 +1,21 @@
+extends ../layout.ejs
+
+block content
+    h1 Alteração do Fornecedor
+    hr
+    br
+    form(method="POST", action="/fornecedores/edit/#{value._id}", role="form")
+      input(type="hidden" name="_method" value="put")
+      div(class="form-group")
+        label Nome:
+        input(type="text", name="nome", class="form-control", value="#{value.nome}")
+      div(class="form-group")
+        label CNPJ:
+        input(type="text", name="cnpj", class="form-control", value="#{value.cnpj}")
+      div(class="form-group")
+        label Rasão Social:
+        input(type="text", name="rasaosocial", class="form-control", value="#{value.rasaosocial}")
+      input(type="submit", value="Atualizar", class="btn btn-success")
+    br
+    br
+    a(href="/usuarios" title="Voltar") Voltar

@@ -1,0 +1,16 @@
+<% include header.ejs %>
+
+    <h1 value.nome></h1>
+    <br/>
+    <br/>
+    <p data-value="_id"> Id : </p>
+    <p data-value="login"> Nome: </p>
+    <p data-value="data_cad"> Data de Cadastro:</p>
+    <br/>
+    <form method="POST" action="/fornecedores/delete/#{value._id}" role="form">
+      <input type="hidden" name="_method" value="delete"/>
+      <input type="submit" value="Excluir" class="btn btn-danger"/>
+    </form>
+    <br/>
+    <a href="/fornecedores" title="Voltar">Voltar</a>
+<% include footer.ejs%>

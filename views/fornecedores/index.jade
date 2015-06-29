@@ -1,0 +1,36 @@
+extends ../layout.ejs
+
+block content
+		h1 Listagem de Fornecedores
+		hr
+		br
+		a(href="/fornecedores/create" title="Cadastrar", class="btn btn-success") Cadastrar
+		br
+		br
+		if messages.info
+			div(class="alert alert-info")
+				p= messages.info
+		br
+		table(class="table")
+			thead
+				tr
+					th ID:
+					th Nome:
+					th CNPJ:
+					th Rasão Social:
+					th Data:
+					th Ações:
+			tbody
+				each valor, i in lista
+					tr
+						td #{valor._id}
+						td #{valor.nome}
+						td #{valor.cnpj}
+						td #{valor.rasaosocial}
+						td #{moment(valor.data_cad).format('DD/MM/YYYY')}
+						td
+							a(href="/fornecedores/edit/#{valor._id}", title="Editar", class="btn btn-info")
+								span(class="glyphicon glyphicon-pencil")
+							&nbsp
+							a(href="/fornecedores/show/#{valor._id}", title="Editar", class="btn btn-primary")
+								span(class="glyphicon glyphicon-search")
