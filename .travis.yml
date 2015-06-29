@@ -1,4 +1,10 @@
 language: node_js
 node_js:
-- '0.11'
-- '0.10'
+  - "0.12"
+deploy:
+  provider: heroku
+  api_key:
+    secure: 8d8b31bf-ade7-46e9-a0e9-19c971785ad5
+  app: projetp
+  on:
+    repo: luizfernandoalvesbraga/node-app
